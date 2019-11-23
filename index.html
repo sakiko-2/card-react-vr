@@ -6,19 +6,15 @@
   </head>
   <body>
     <!-- When you're ready to deploy your app, update this line to point to your compiled client.bundle.js -->
-    <div id="container"></div>
     <script src="./build/client.bundle.js"></script>
     <script>
       // Initialize the React VR application
       ReactVR.init(
         // When you're ready to deploy your app, update this line to point to
         // your compiled index.bundle.js
-        'index.bundle.js',
-        // Attach it
-        document.getElementById('container'),
-        {
-          assetRoot: 'build/static_assets/',
-        }
+        './build/index.bundle.js',
+        // Attach it to the body tag
+        document.body
       );
     </script>
   </body>
