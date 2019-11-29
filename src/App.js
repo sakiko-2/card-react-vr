@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {
   asset,
   Pano,
-  Text,
   View,
   VrButton
 } from 'react-vr';
+import Door from './components/Door';
 
 export default class App extends Component {
   constructor(props) {
@@ -25,27 +25,13 @@ export default class App extends Component {
 
   render() {
     const { entered } = this.state;
-    const background = entered ? 'space.jpg' : 'chess-world.jpg';
-    const message = entered ? 'happy birthday' : 'click me';
+    const background = entered ? 'space.jpg' : 'metro.jpg';
 
     return (
       <View>
         <Pano source={asset(background)}/>
         <VrButton onClick={this.changeScene}>
-          <Text
-            style={{
-              backgroundColor: '#777879',
-              fontSize: 0.8,
-              fontWeight: '400',
-              layoutOrigin: [0.5, 0.5],
-              paddingLeft: 0.2,
-              paddingRight: 0.2,
-              textAlign: 'center',
-              textAlignVertical: 'center',
-              transform: [{translate: [0, 0, -3]}],
-            }}>
-            {message}
-          </Text>
+          <Door />
         </VrButton>
       </View>
     );
