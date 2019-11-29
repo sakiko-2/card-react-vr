@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node -e \"console.log('open browser at http://localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
-    "bundle": "node node_modules/react-vr/scripts/bundle.js",
+    "bundle": "node node_modules/react-vr/scripts/bundle.js && sh scripts/copy-assets.sh",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
     "ovrui": "~2.0.0",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
+    "gh-pages": "^2.1.1",
     "jest": "^19.0.2",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",
@@ -27,5 +29,6 @@
   },
   "jest": {
     "preset": "react-vr"
-  }
+  },
+  "homepage": "https://sakiko-2.github.io/card-react-vr/"
 }
