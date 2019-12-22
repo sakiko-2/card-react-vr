@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   asset,
-  Box
+  Box,
 } from 'react-vr';
 
 const Door = () => (
@@ -15,7 +15,7 @@ const Door = () => (
       paddingLeft: 0.2,
       paddingRight: 0.2,
       position: 'absolute',
-      transform: [{translate: [0, 0, -3]}],
+      transform: [{ translate: [0, 0, -3] }],
     }}
     texture={asset('door.png')}
   />

@@ -3,7 +3,7 @@ import {
   asset,
   Pano,
   View,
-  VrButton
+  VrButton,
 } from 'react-vr';
 import Door from './components/Door';
 
@@ -11,17 +11,17 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entered: false
+      entered: false,
     };
 
     this.changeScene = this.changeScene.bind(this);
   }
 
   changeScene() {
-    this.setState(state => ({
-      entered: !state.entered
+    this.setState((state) => ({
+      entered: !state.entered,
     }));
-  };
+  }
 
   render() {
     const { entered } = this.state;
@@ -36,4 +36,4 @@ export default class App extends Component {
       </View>
     );
   }
-};
+}
